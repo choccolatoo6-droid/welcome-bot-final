@@ -19,17 +19,19 @@ const client = new Client({
   ]
 });
 
-client.on('ready', () => {
-  console.log(`✅ Logged in as ${client.user.tag}`);
-});
-
 client.on('guildMemberAdd', member => {
-const channel = member.guild.channels.cache.find(
+  console.log('👤 New member joined:', member.user.tag);
+
+  const channel = member.guild.channels.cache.find(
     ch => ch.name === 'mossy-murmurs' && ch.isTextBased()
   );
-  if (!channel) return;
 
-const rulesChannelID = '1437933382767083550'
+  if (!channel) {
+    console.log('❌ Channel not found');
+    return;
+  }
+
+  console.log('✅ Channel found, sending message');
 
   channel.send(
    `🌿 Welcome <@${member.id}>! Step softly among the petals and moss - this is your space to relax, share hobbies, and meet fellow wanderers. Feel free to settle in and say hi!
