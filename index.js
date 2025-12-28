@@ -45,4 +45,10 @@ However, don't forget to check out <#${rulesChannelID}> and assign yourself role
   );
 });
 console.log('TOKEN exists?', !!process.env.TOKEN);
-client.login(process.env.TOKEN);
+client.login(process.env.TOKEN)
+  .then(() => {
+    console.log("🔑 Login promise resolved");
+  })
+  .catch(err => {
+    console.error("❌ LOGIN FAILED:", err);
+  });
