@@ -20,6 +20,11 @@ const client = new Client({
   ]
 });
 
+client.once('ready', () => {
+  console.log(`✅ Logged in as ${client.user.tag}`);
+});
+
+
 client.on('guildMemberAdd', member => {
   console.log('👤 New member joined:', member.user.tag);
 
