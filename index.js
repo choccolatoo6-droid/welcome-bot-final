@@ -63,7 +63,7 @@ client.on('guildMemberAdd', async (member) => {
   console.log('👤 New member joined:', member.user.tag, 'guild:', member.guild.id);
 
   // Find channel by ID for stability
-  const channel = member.guild.channels.cache.get('PUT_MOSSY_CHANNEL_ID_HERE');
+  const channel = member.guild.channels.cache.get(1437930456589795430);
   if (!channel) {
     console.log('❌ Channel not found by ID; falling back to name lookup');
     const byName = member.guild.channels.cache.find(ch => ch.name === 'mossy-murmurs' && ch.isTextBased());
