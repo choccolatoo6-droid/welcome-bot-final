@@ -39,5 +39,5 @@ client.on('guildMemberAdd', member => {
 However, don't forget to check out <#${rulesChannelID}> and assign yourself roles in <id:customize> to join in the adventures!  `
   );
 });
-
+console.log('TOKEN exists?', !!process.env.TOKEN);
 client.login(process.env.TOKEN);
