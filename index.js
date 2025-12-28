@@ -9,7 +9,8 @@ http.createServer((req, res) => {
   console.log(`Web server running on port ${PORT}`);
 });
 
-require('dotenv').config();
+require('dotenv').config(); const rulesChannelID = '1437933382767083550';
+
 const { Client, GatewayIntentBits } = require('discord.js');
 
 const client = new Client({
