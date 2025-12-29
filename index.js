@@ -1,3 +1,5 @@
+console.log("PORT:", process.env.PORT);
+console.log("TOKEN length:", process.env.TOKEN?.length);
 require('dotenv').config();
 const { Client, GatewayIntentBits } = require('discord.js');
 const http = require('http');
