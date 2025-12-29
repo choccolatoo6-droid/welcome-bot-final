@@ -25,8 +25,7 @@ http.createServer((req, res) => {
         ch => ch.name === 'mossy-murmurs' && ch.isTextBased()
       );
       if (!channel) return console.log('❌ Channel not found');
-      channel.send(`🌿 Welcome <@${member.id}>! Step softly among the petals and moss - this is your space to relax, share hobbies, and meet fellow wanderers. Feel free to settle in and say hi!
-However, don't forget to check out <#${rulesChannelID}> and assign yourself roles in <id:customize> to join in the adventures!);
+      channel.send(`🌿 Welcome <@${member.id}>! Check <#1437933382767083550> and assign yourself roles.`);
     });
 
     // Add a small delay to let the HTTP server fully initialize
@@ -39,4 +38,3 @@ However, don't forget to check out <#${rulesChannelID}> and assign yourself role
     process.exit(1);
   }
 })();
- FAILED:", err));
